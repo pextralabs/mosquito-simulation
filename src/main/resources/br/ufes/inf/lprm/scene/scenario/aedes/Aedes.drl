@@ -7,7 +7,7 @@ import br.ufes.inf.lprm.scene.model.Situation;
 import br.ufes.inf.lprm.scene.util.SituationHelper;
 import br.ufes.inf.lprm.situation.model.events.*;
 
-
+/*
 declare capturedMosquitoAndCallingAgent extends Situation
 	house: House @part
 	eggs: Eggs @part
@@ -149,4 +149,4 @@ rule "AgentWorking"
 		
 		//System.out.println("Agent Worked");
 end
-		
+*/		
