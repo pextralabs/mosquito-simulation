@@ -14,7 +14,7 @@ import org.kie.api.definition.type.Role;
  *
  * @author alessandro
  */
-public class Rained {
+public class Rain {
    private House returningfocus;
 
 public House getReturningfocus() {

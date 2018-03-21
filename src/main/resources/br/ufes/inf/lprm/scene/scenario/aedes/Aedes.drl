@@ -7,6 +7,23 @@ import br.ufes.inf.lprm.scene.model.Situation;
 import br.ufes.inf.lprm.scene.util.SituationHelper;
 import br.ufes.inf.lprm.situation.model.events.*;
 
+rule "Rain after 15 days dry"
+	when
+		not Rain () over window:time(15d)
+	then
+		insert(new Rain());
+end
+
+rule "house back as activate focus after rainning"
+	when
+	    Rain()
+		house: House(!focus)
+	then
+		house.setActivefocus(true);
+		System.out.println(house.getName() + " now back as active focus");
+end
+
+
 /*
 declare capturedMosquitoAndCallingAgent extends Situation
 	house: House @part
@@ -45,16 +62,6 @@ rule "mosquitoLayingEggs"
 		eggsHatched eventHatch = new eggsHatched();
 		eventHatch.setHatched(neweggs);
 		insert(eventHatch);
-end
-
-
-rule "raining"
-	when
-		house: House(focus==true)
-		not Rained (this.returningfocus==house) over window:time(15d)
-	then
-		house.setActivefocus(true);
-		//System.out.println("raining");
 end
 
 rule "eggshatching"
