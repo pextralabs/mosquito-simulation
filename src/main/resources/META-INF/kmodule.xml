@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kmodule xmlns="http://www.drools.org/xsd/kmodule">
-  <kbase name="scenarioKieBase" packages="br.ufes.inf.lprm.context.scenario" default="true" includes="sceneKieBase,contextKieBase"/>
+  <kbase name="scenarioKieBase" packages="br.ufes.inf.lprm.scene.scenario.aedes" default="true" includes="sceneKieBase"/>
 </kmodule>

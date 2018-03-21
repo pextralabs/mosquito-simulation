@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.ufes.inf.lprm.context.scenario.aedes;
+package br.ufes.inf.lprm.scene.scenario.aedes;
 
 import org.kie.api.definition.type.Expires;
 import org.kie.api.definition.type.Role;

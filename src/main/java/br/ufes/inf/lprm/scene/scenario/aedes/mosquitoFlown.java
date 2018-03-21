@@ -3,27 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.ufes.inf.lprm.context.scenario.aedes;
+package br.ufes.inf.lprm.scene.scenario.aedes;
 
 import org.kie.api.definition.type.Expires;
 import org.kie.api.definition.type.Role;
 
 @Role(Role.Type.EVENT)
-@Expires("20d")
+@Expires("1d")
 /**
  *
  * @author alessandro
  */
-public class mosquitoLayedEggs {
-   private Mosquito layed;
+public class mosquitoFlown {
+   private Mosquito migrated;
 
-public Mosquito getLayed() {
-	return layed;
+public Mosquito getMigrated() {
+	return migrated;
 }
 
-public void setLayed(Mosquito layed) {
-	this.layed = layed;
+public void setMigrated(Mosquito migrated) {
+	this.migrated = migrated;
 }
-
    
 }

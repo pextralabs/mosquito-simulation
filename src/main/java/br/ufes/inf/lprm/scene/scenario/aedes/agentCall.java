@@ -3,28 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.ufes.inf.lprm.context.scenario.aedes;
+package br.ufes.inf.lprm.scene.scenario.aedes;
 
 import org.kie.api.definition.type.Expires;
 import org.kie.api.definition.type.Role;
 
 @Role(Role.Type.EVENT)
-@Expires("38d")
-
+@Expires("4d")
 /**
  *
  * @author alessandro
  */
-public class Mosquito{
+public class agentCall {
+   private House calledAgent;
 
-   private House house;
+public House getCalledAgent() {
+	return calledAgent;
+}
 
-	public House getHouse() {
-		return house;
-	}
+public void setCalledAgent(House calledAgent) {
+	this.calledAgent = calledAgent;
+}
 
-	public void setHouse(House house) {
-		this.house = house;
-	}
    
 }
