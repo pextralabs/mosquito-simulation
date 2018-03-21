@@ -17,14 +17,14 @@ end
 rule "house back as activate focus after rainning"
 	when
 	    Rain()
-		house: House(!focus)
+		house: House(focus, !activefocus)
 	then
 		house.setActivefocus(true);
 		System.out.println(house.getName() + " now back as active focus");
 end
 
 
-/*
+
 declare capturedMosquitoAndCallingAgent extends Situation
 	house: House @part
 	eggs: Eggs @part
@@ -48,7 +48,7 @@ end
 rule "mosquitoLayingEggs"
 	when
 		mosquito: Mosquito()
-		house: House() from mosquito.getHouse()
+		house: House(trap || activefocus) from mosquito.getHouse()
 		not mosquitoLayedEggs (this.layed==mosquito) over window:time(1d)
 	then
 		mosquitoLayedEggs eventLay = new mosquitoLayedEggs();
@@ -64,6 +64,7 @@ rule "mosquitoLayingEggs"
 		insert(eventHatch);
 end
 
+/*
 rule "eggshatching"
 	when
 		eggs: Eggs()
