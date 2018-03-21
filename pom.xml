@@ -62,7 +62,7 @@
 
   <repositories>
     <repository>
-      <UID>Scene repo</UID>
+      <id>Scene repo</id>
       <url>https://mymavenrepo.com/repo/BG5Za6vz3CyY7SaQjMOa/</url>
     </repository>
 
